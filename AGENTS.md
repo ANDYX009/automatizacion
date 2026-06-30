@@ -61,5 +61,34 @@ El entorno local y remoto se encuentran completamente alineados y respaldados en
 - **Menú de Ayuda:** Presionar la tecla `/` despliega de forma nativa la lista oficial de comandos del sistema.
 - **Verificación de Modelos:** Comando `/models` (Permite interactuar y mapear los proveedores disponibles en OpenCode Zen).
 - **Salida Segura:** Comando `/exit` (Cierra la interfaz interactiva y devuelve el control a Ubuntu).
+## [RECAPITULACIÓN DE LA SESIÓN - CLASE 3 COMPLETADA]
+- **Lo que hicimos:** 
+  1. Corregimos el desalineamiento del sistema asegurando el entorno nativo Linux (WSL) dentro de Warp.
+  2. Testeamos con éxito el comando interactivo `/models` en la interfaz completa (TUI) de OpenCode.
+  3. Implementamos un control de integridad criptográfico (SHA-256) binario y optimizado en bloques en `heartbeat.py`.
+  4. Realizamos un ejercicio de estrés simulando una alteración en `HEARTBEAT.md`, validando el bloqueo autónomo del pipeline.
+  5. Solucionamos un falso positivo de seguridad mediante la herramienta `Undo` para eliminar caracteres invisibles.
+  6. Consolidamos el historial del proyecto con un control de versiones impecable en GitHub usando `.gitignore`.
+- **Lo que falta (Próxima Sesión):**
+  1. Iniciar la Clase 4 del manual: Concurrencia básica con la biblioteca estándar.
+  2. Modificar el Watchdog para que envíe los registros de latidos y alertas a dos archivos de logs paralelos de forma asíncrona.
+- **Contexto requerido por la IA para continuar:**
+  1. El archivo `heartbeat.py` se mantiene en su versión estable con validador SHA-256 activo.
+  2. El entorno se encuentra restaurado y con integridad saludable.
 
+## [MANUAL DE ENTORNOS Y COMANDOS VERIFICADOS - WINDOWS/WSL]
+### 1. Entorno de Ejecución Correcto
+- **Sistema Operativo Base:** Windows 11.
+- **Entorno de Desarrollo:** Subsistema de Windows para Linux (WSL / Ubuntu) ejecutado nativamente en Warp.
+- **Regla de Conexión:** Si la terminal inicia en PowerShell de Windows, se debe ingresar obligatoriamente el comando `wsl` para migrar al entorno de datos Linux.
 
+### 2. Comandos de Consola Validados
+- **Limpieza de Pantalla:** Comando `clear` (Limpia el buffer actual de la shell de Linux).
+- **Navegación:** `cd ~/proyectos/automatizacion` (Mueve el cursor a la raíz del proyecto).
+- **Ejecución de Automatismos:** `python3 ~/proyectos/automatizacion/heartbeat.py` (Inicia el bucle continuo).
+
+### 3. Comandos Internos OpenCode (TUI)
+- **Acceso:** `opencode` (Abre la interfaz gráfica completa en la terminal).
+- **Menú de Ayuda:** Presionar la tecla `/` despliega de forma nativa la lista oficial de comandos del sistema.
+- **Verificación de Modelos:** Comando `/models` (Permite interactuar y mapear los proveedores disponibles en OpenCode Zen).
+- **Salida Segura:** Comando `/exit` (Cierra la interfaz interactiva y devuelve el control a Ubuntu).
