@@ -25,3 +25,41 @@ El entorno local y remoto se encuentran completamente alineados y respaldados en
 - Asumir un rol de Programador Profesional, Ingeniero de Datos Experto y Mentor.
 - Toda la información técnica proporcionada debe ser verificable y provenir de documentación de alta calidad, estudios o repositorios oficiales.
 - Responder estrictamente a **un solo problema, consulta o instrucción a la vez** para asegurar la asimilación del estudiante.
+
+## [REGLAS DE DESARROLLO - PYTHON 3.14.4]
+- **Estilo:** Adherencia estricta a PEP 8 (identación de 4 espacios, nombres en snake_case).
+- **Tipado:** Tipado estático obligatorio (*type hinting*) en todas las funciones y métodos.
+- **Restricción:** Uso exclusivo de la Biblioteca Estándar (*stdlib*). Prohibido `pip` o entornos virtuales por el momento.
+- **Concurrencia moderna:** Uso preferente de `asyncio` y el nuevo módulo `interpreters` (PEP 734) si se requiere aislamiento de hilos sin GIL.
+## [RECAPITULACIÓN DE LA SESIÓN - CLASE 2 COMPLETADA]
+- **Lo que hicimos:** 
+  1. Corregimos el entorno de la terminal asegurando la conexión nativa a Linux (WSL/Ubuntu) en lugar de PowerShell.
+  2. Testeamos el entorno interactivo completo de OpenCode (TUI), localizando visualmente la existencia de `/models` para el cambio de IA.
+  3. Desmentimos el comando teórico `/variance` tras verificar en la documentación que no existía en el motor local.
+  4. Programamos, testeamos y detuvimos con éxito el bucle continuo del Watchdog Autónomo (`heartbeat.py`) con intervalos exactos de 60 segundos.
+- **Lo que falta (Próxima Sesión):**
+  1. Iniciar la Clase 3 del manual de automatización.
+  2. Implementar un validador de integridad para que el Watchdog detecte si los archivos de configuración son modificados externamente.
+  3. Configurar el inicio automático del script al abrir la terminal.
+- **Contexto requerido por la IA para continuar:**
+  1. El archivo `heartbeat.py` se encuentra en su versión estable con manejo de interrupción limpia.
+  2. El árbol de trabajo local contiene registros actualizados en `logs/heartbeat.log`.
+
+## [MANUAL DE ENTORNOS Y COMANDOS VERIFICADOS]
+### 1. Entorno de Ejecución Correcto
+- **Sistema Operativo Base:** Windows 11.
+- **Entorno de Desarrollo:** Subsistema de Windows para Linux (WSL / Ubuntu) ejecutado nativamente en Warp.
+- **Regla de Conexión:** Si la terminal inicia en PowerShell de Windows, se debe ingresar obligatoriamente el comando `wsl` para migrar al entorno de datos Linux.
+
+### 2. Comandos de Consola Validados
+- **Limpieza de Pantalla:** Comando `clear` (Limpia el buffer actual de la shell de Linux).
+- **Navegación:** `cd ~/proyectos/automatizacion` (Mueve el cursor a la raíz del proyecto).
+- **Ejecución de Automatismos:** `python3 ~/proyectos/automatizacion/heartbeat.py` (Inicia el bucle continuo).
+
+### 3. Comandos Internos OpenCode (TUI)
+- **Acceso:** `opencode` (Abre la interfaz gráfica completa en la terminal).
+- **Menú de Ayuda:** Presionar la tecla `/` despliega de forma nativa la lista oficial de comandos del sistema.
+- **Verificación de Modelos:** Comando `/models` (Permite interactuar y mapear los proveedores disponibles en OpenCode Zen).
+- **Salida Segura:** Comando `/exit` (Cierra la interfaz interactiva y devuelve el control a Ubuntu).
+
+
