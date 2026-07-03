@@ -29,3 +29,9 @@
 - El archivo `heartbeat.py` se mantiene en su versión estable asíncrona con el loop de eventos protegido de tracebacks.
 - Los logs de alertas y latidos están estructurados y validados bit por bit en el disco local de Ubuntu.
 - En la siguiente sesión se debe iniciar directamente con la **Clase 5 del manual**: Configuración de scripts de inicio automático en la terminal para automatizar tu Watchdog en el arranque del sistema.
+
+### Clase 5: Automatización y Loop Engineering
+- Estructuramos el flujo de trabajo bajo el marco del archivo `AGENTS.md` e inicializamos el entorno de OpenCode (`opencode.jsonc`).
+- Diseñamos y guardamos la especificación técnica en `INICIO_AUTOMATICO.md` antes de modificar configuraciones del sistema (SDD).
+- Automatizamos el arranque del Watchdog asíncrono en segundo plano inyectando un bloque condicional robusto en `~/.bashrc`.
+- Validamos el aislamiento de flujos redirigiendo las salidas a `/dev/null` y auditamos con éxito el proceso mediante `ps aux`.
