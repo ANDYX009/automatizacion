@@ -35,3 +35,13 @@
 - Diseñamos y guardamos la especificación técnica en `INICIO_AUTOMATICO.md` antes de modificar configuraciones del sistema (SDD).
 - Automatizamos el arranque del Watchdog asíncrono en segundo plano inyectando un bloque condicional robusto en `~/.bashrc`.
 - Validamos el aislamiento de flujos redirigiendo las salidas a `/dev/null` y auditamos con éxito el proceso mediante `ps aux`.
+
+### Clase 6: Pruebas Unitarias Robustas y Mocking Asíncrono
+- Diseñamos el plan de pruebas bajo la metodología SDD en el archivo `SPEC_TESTS.md`.
+- Construimos un arnés de pruebas asíncronas heredando de `unittest.IsolatedAsyncioTestCase` para aislar el bucle de eventos en RAM.
+- Implementamos inyección quirúrgica de estados simulando lecturas físicas por bloques mediante el control de `side_effect`.
+- Auditamos y corregimos falsos negativos mediante la verificación del hash SHA-256 (`5d0c63...`) con la biblioteca estándar.
+- Validamos con éxito el comportamiento del Watchdog ante escenarios de integridad exitosa y ataques simulados.
+
+
+
