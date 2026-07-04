@@ -8,13 +8,12 @@ class TestWatchdogIntegridad(unittest.IsolatedAsyncioTestCase):
 
     async def test_integridad_exitosa(self) -> None:
         """TEST 1: Caso de éxito simulando lectura por bloques en RAM."""
-                # Hash SHA-256 exacto y verificado de b"bytes_correctos_simulados"
+        # Hash SHA-256 exacto y verificado de b"bytes_correctos_simulados"
         hash_falso = (
             "5d0c638f04f583e296c823ff8be164aef"
             "77d3c5d4a5558f3b69f84ef6daa4673"
         )
 
-        
         # Fabricamos un simulador de archivo manual que entiende el bucle while
         mock_file = MagicMock()
         # Primera llamada devuelve los bytes; segunda llamada devuelve vacío para romper el bucle

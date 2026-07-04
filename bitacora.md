@@ -42,6 +42,11 @@
 - Implementamos inyección quirúrgica de estados simulando lecturas físicas por bloques mediante el control de `side_effect`.
 - Auditamos y corregimos falsos negativos mediante la verificación del hash SHA-256 (`5d0c63...`) con la biblioteca estándar.
 - Validamos con éxito el comportamiento del Watchdog ante escenarios de integridad exitosa y ataques simulados.
+### Clase 7: Infraestructura MCP y Comandos Personalizados
+- Configuramos con éxito el cliente de OpenCode conectando el protocolo MCP con el servidor remoto de Context7.
+- Implementamos inyección dinámica de credenciales mediante variables de entorno para blindar tokens de seguridad en Git.
+- Diseñamos y registramos el comando personalizado `/audit` en el directorio oculto `.opencode/commands/`.
+- Automatizamos la re-auditoría estática del proyecto y corregimos desviaciones estéticas de PEP 8 en RAM desde la TUI de OpenCode.
 
 
 

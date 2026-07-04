@@ -1,7 +1,17 @@
 {
-  "$schema": "https://opencode.ai/config.json",
+  "$schema": "https://opencode.ai",
   "username": "ANDYX009",
   "instructions": ["AGENTS.md", "HEARTBEAT.md"],
   "model": "opencode/deepseek-v4-flash-free",
-  "default_agent": "general"
+  "default_agent": "general",
+  "mcp": {
+    "context7": {
+      "type": "remote",
+      "url": "https://mcp.context7.com/mcp",
+      "enabled": true,
+      "headers": {
+        "CONTEXT7_API_KEY": "{env:CONTEXT7_API_KEY}"
+      }
+    }
+  }
 }
