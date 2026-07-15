@@ -47,6 +47,21 @@
 - Implementamos inyección dinámica de credenciales mediante variables de entorno para blindar tokens de seguridad en Git.
 - Diseñamos y registramos el comando personalizado `/audit` en el directorio oculto `.opencode/commands/`.
 - Automatizamos la re-auditoría estática del proyecto y corregimos desviaciones estéticas de PEP 8 en RAM desde la TUI de OpenCode.
+### Clase 8: Aseguramiento de Calidad (QA), Perfilado de RAM y Refactor Agéntico
+- **Auditoría de Bloqueos (I/O síncrono):** Ejecutamos el comando personalizado `/audit` en OpenCode, detectando micro-congelamientos arquitectónicos en el hilo principal causados por llamadas síncronas a `verificar_integridad` y `os.makedirs`.
+- **Refactor Asíncrono de Bajo Nivel:** Modificamos el Watchdog para encapsular por completo el bucle de lectura binaria de 4096 bytes y la creación de rutas dentro de hilos secundarios usando `asyncio.to_thread`.
+- **Higiene de Escrituras:** Eliminamos las funciones anónimas `lambda` fugaces en la persistencia de logs, sustituyéndolas por funciones internas estructuradas con administradores de contexto (`with open`) para prevenir fugas de descriptores de archivos (*file descriptor leaks*).
+- **Alineación del Arnés:** Actualizamos el arnés de pruebas unitarias (`test_heartbeat.py`) para adaptarlo a la nueva arquitectura asíncrona de hilos, validando el éxito total del laboratorio con un resultado de 2/2 tests aprobados en RAM.
+- **Perfilado Científico de Memoria:** Diseñamos e inyectamos un script de estrés con el módulo nativo `tracemalloc`, midiendo un pico máximo de memoria RAM fijo de apenas **235.88 KB**. Esto demostró matemáticamente la eficiencia y el comportamiento plano del *chunking* de 4 KB ante el *Out of Memory Killer* de Linux.
+- **Sincronización y Cierre:** Eliminamos los scripts temporales de prueba, consolidamos el historial estético del proyecto y subimos de forma segura todos los cambios estables a la rama remota `main` de GitHub mediante autenticación por SSH.
+
+## [PUNTO EXACTO PARA RETOMAR LA PRÓXIMA SESIÓN]
+- El entorno local en WSL y el repositorio remoto están 100% alineados y protegidos (`working tree clean`).
+- El Watchdog autónomo asíncrono y su arnés de pruebas se encuentran en su versión más óptima, eficiente y libre de bloqueos I/O.
+- El archivo `AGENTS.md` está blindado con el contexto del estudiante del IPN, la meta profesional hacia el 2026 y los guardarraíles técnicos de desarrollo de la biblioteca estándar de Python.
+- En la siguiente sesión se debe iniciar directamente con el siguiente bloque del manual de automatización avanzada o la **Clase 9**.
+
+
 
 
 
