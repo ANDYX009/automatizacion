@@ -1,4 +1,4 @@
-# Watchdog Autónomo de Integridad Asíncrono
+# Watchdog Autónomo de Integridad Asíncrono 
 
 ## 📋 Descripción General
 Este proyecto consiste en un agente de monitoreo autónomo (*Watchdog*) diseñado bajo un enfoque de desarrollo guiado por especificaciones (SDD). Su función principal es validar de manera continua la integridad de los archivos críticos del entorno mediante criptografía y registrar latidos rutinarios de salud del sistema, aislando las alertas de seguridad en flujos de datos paralelos.

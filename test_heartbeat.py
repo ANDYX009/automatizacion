@@ -10,8 +10,7 @@ class TestWatchdogIntegridad(unittest.IsolatedAsyncioTestCase):
         """TEST 1: Caso de éxito simulando lectura por bloques en RAM."""
         # Hash SHA-256 exacto y verificado de b"bytes_correctos_simulados"
         hash_falso = (
-            "5d0c638f04f583e296c823ff8be164aef"
-            "77d3c5d4a5558f3b69f84ef6daa4673"
+            "5d0c638f04f583e296c823ff8be164aef77d3c5d4a5558f3b69f84ef6daa4673"
         )
 
         # Fabricamos un simulador de archivo manual que entiende el bucle while
